@@ -82,9 +82,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Sarah Jenkins", text: "Absolutely love my nails! The staff are so friendly and the salon is gorgeous. I won't go anywhere else in Woking." },
-              { name: "Emily Davies", text: "Best pedicure I've ever had. Such a relaxing experience and my gel polish lasted for weeks without chipping." },
-              { name: "Chloe Smith", text: "Incredible attention to detail on my acrylics and nail art. They exactly replicated the design I brought in!" }
+              { name: "Emma T.", text: "The SNS French manicures here are absolutely beautiful and look incredibly natural. The staff are so efficient and caring!" },
+              { name: "Laura W.", text: "Such a bright, airy, and professional environment. Plus, the massage chairs and free drinks during a pedicure make it feel like luxury." },
+              { name: "Sophie C.", text: "They have a huge variety of colors, very reasonable prices, and the quality is always high. My absolute go-to salon in Knaphill." }
             ].map((review, idx) => (
               <Card key={idx} className="bg-white border-none shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="pt-8 px-6 pb-6 text-center">
