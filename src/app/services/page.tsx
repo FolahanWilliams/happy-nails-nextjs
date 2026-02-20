@@ -8,9 +8,9 @@ const services = [
         icon: Hand,
         description: "Classic nail care for beautiful, healthy hands.",
         items: [
-            { name: "Classic Manicure", price: "From £20" },
-            { name: "File & Polish", price: "From £15" },
-            { name: "Luxury Spa Manicure", price: "From £35" },
+            { name: "Classic Manicure", price: "Price on request" },
+            { name: "File & Polish", price: "Price on request" },
+            { name: "Luxury Spa Manicure", price: "Price on request" },
         ]
     },
     {
@@ -18,9 +18,9 @@ const services = [
         icon: Heart,
         description: "Relaxing treatments for tired soles and toes.",
         items: [
-            { name: "Classic Pedicure", price: "From £25" },
-            { name: "Luxury Spa Pedicure", price: "From £40" },
-            { name: "File & Polish Toes", price: "From £15" },
+            { name: "Classic Pedicure", price: "Price on request" },
+            { name: "Luxury Spa Pedicure", price: "Price on request" },
+            { name: "File & Polish Toes", price: "Price on request" },
         ]
     },
     {
@@ -28,10 +28,10 @@ const services = [
         icon: Sparkle,
         description: "Long-lasting, chip-resistant vibrant colour.",
         items: [
-            { name: "Gel Colour Hands", price: "From £28" },
-            { name: "Gel Colour Toes", price: "From £28" },
-            { name: "Gel Removal & Redo", price: "From £32" },
-            { name: "Safe Gel Removal", price: "From £10" },
+            { name: "Gel Colour Hands", price: "Price on request" },
+            { name: "Gel Colour Toes", price: "Price on request" },
+            { name: "Gel Removal & Redo", price: "Price on request" },
+            { name: "Safe Gel Removal", price: "Price on request" },
         ]
     },
     {
@@ -39,9 +39,9 @@ const services = [
         icon: Layers,
         description: "Dipping powder for durable, natural-looking nails.",
         items: [
-            { name: "SNS Full Set (Extensions)", price: "From £40" },
-            { name: "SNS Overlay (Natural Nails)", price: "From £35" },
-            { name: "SNS Infill", price: "From £30" },
+            { name: "SNS Full Set (Extensions)", price: "Price on request" },
+            { name: "SNS Overlay (Natural Nails)", price: "Price on request" },
+            { name: "SNS Infill", price: "Price on request" },
         ]
     },
     {
@@ -49,10 +49,10 @@ const services = [
         icon: Scissors,
         description: "Classic enhancement for dramatic length and ultimate strength.",
         items: [
-            { name: "Acrylic Full Set", price: "From £38" },
-            { name: "Acrylic Infill", price: "From £28" },
-            { name: "Ombré Full Set", price: "From £45" },
-            { name: "Acrylic Removal", price: "From £15" },
+            { name: "Acrylic Full Set", price: "Price on request" },
+            { name: "Acrylic Infill", price: "Price on request" },
+            { name: "Ombré Full Set", price: "Price on request" },
+            { name: "Acrylic Removal", price: "Price on request" },
         ]
     },
     {
@@ -60,10 +60,10 @@ const services = [
         icon: Paintbrush,
         description: "Customise your look with bespoke designs.",
         items: [
-            { name: "Simple Design (per nail)", price: "From £3" },
+            { name: "Simple Design (per nail)", price: "Price on request" },
             { name: "Complex Design / Chrome", price: "Price on request" },
-            { name: "French Tip Add-on", price: "From £5" },
-            { name: "Nail Repair", price: "From £3" },
+            { name: "French Tip Add-on", price: "Price on request" },
+            { name: "Nail Repair", price: "Price on request" },
         ]
     }
 ];
@@ -112,9 +112,6 @@ export default function Services() {
                         ))}
                     </div>
 
-                    <div className="mt-16 text-center text-sm text-textdark/60 italic border-t border-accentrose/20 pt-8">
-                        * All prices are starting prices and may vary based on nail length, condition, and specific design requests. Please consult your technician before your service begins.
-                    </div>
                 </div>
             </section>
 
