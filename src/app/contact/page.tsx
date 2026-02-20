@@ -8,12 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function Contact() {
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Normally handled via Web3Forms or an API route
-        alert("Thank you for your message! We will get back to you shortly.");
-    };
-
     return (
         <div className="flex flex-col flex-grow bg-white">
 
@@ -87,7 +81,7 @@ export default function Contact() {
                             {/* Small Map */}
                             <div className="w-full h-64 rounded-2xl overflow-hidden shadow-sm border border-accentrose/20">
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d2516.488390779929!2d-0.612143023253!3d51.319747571790696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876024976451663%3A0xe54359d9c9e8bb3c!2sNorthpoint%20House%2C%2052%20High%20St%2C%20Knaphill%2C%20Woking%20GU21%202PY%2C%20UK!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
+                                    src="https://maps.google.com/maps?q=Northpoint%20House,%2052%20High%20St,%20Knaphill,%20Woking%20GU21%202PY&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0 }}
@@ -109,21 +103,28 @@ export default function Contact() {
                                         </p>
                                     </div>
 
-                                    <form onSubmit={handleSubmit} className="space-y-6 flex-grow flex flex-col">
+                                    {/* Using formsubmit.co for frictionless contact form. User receives email directly. */}
+                                    <form action="https://formsubmit.co/folahanwilliams@gmail.com" method="POST" className="space-y-6 flex-grow flex flex-col">
+                                        {/* Configuration for formsubmit */}
+                                        <input type="hidden" name="_subject" value="New Website Enquiry - Happy Nails!" />
+                                        <input type="hidden" name="_captcha" value="false" />
+                                        <input type="hidden" name="_next" value="https://happy-nails-nextjs.vercel.app/contact?submitted=true" />
+
                                         <div className="space-y-2">
                                             <label htmlFor="name" className="text-sm font-bold text-textdark">Full Name *</label>
-                                            <Input id="name" required placeholder="Jane Doe" className="border-accentrose/30 focus-visible:ring-accentrose py-6 text-base" />
+                                            <Input id="name" name="name" required placeholder="Jane Doe" className="border-accentrose/30 focus-visible:ring-accentrose py-6 text-base" />
                                         </div>
 
                                         <div className="space-y-2">
                                             <label htmlFor="phone" className="text-sm font-bold text-textdark">Phone Number *</label>
-                                            <Input id="phone" type="tel" required placeholder="07123 456789" className="border-accentrose/30 focus-visible:ring-accentrose py-6 text-base" />
+                                            <Input id="phone" name="phone" type="tel" required placeholder="07123 456789" className="border-accentrose/30 focus-visible:ring-accentrose py-6 text-base" />
                                         </div>
 
                                         <div className="space-y-2 flex-grow flex flex-col">
                                             <label htmlFor="message" className="text-sm font-bold text-textdark">How can we help? *</label>
                                             <Textarea
                                                 id="message"
+                                                name="message"
                                                 required
                                                 placeholder="I'd like to book a gel manicure for next Tuesday at 2pm..."
                                                 className="border-accentrose/30 focus-visible:ring-accentrose flex-grow resize-none text-base p-4 min-h-[150px]"

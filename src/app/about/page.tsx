@@ -84,7 +84,7 @@ export default function About() {
                     <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
                         {/* Generic Google Maps Embed for the given address */}
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d2516.488390779929!2d-0.612143023253!3d51.319747571790696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876024976451663%3A0xe54359d9c9e8bb3c!2sNorthpoint%20House%2C%2052%20High%20St%2C%20Knaphill%2C%20Woking%20GU21%202PY%2C%20UK!5e0!3m2!1sen!2sus!4v1715000000000!5m2!1sen!2sus"
+                            src="https://maps.google.com/maps?q=Northpoint%20House,%2052%20High%20St,%20Knaphill,%20Woking%20GU21%202PY&t=&z=15&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
