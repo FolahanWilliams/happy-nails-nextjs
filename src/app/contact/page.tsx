@@ -1,13 +1,8 @@
 "use client";
 
-import { MapPin, Phone, Clock, Mail, Send } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { MapPin, Phone, Clock } from "lucide-react";
 
 export default function Contact() {
-
     return (
         <div className="flex flex-col flex-grow bg-white">
 
@@ -21,65 +16,53 @@ export default function Contact() {
 
             {/* Main Content */}
             <section className="py-24">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+                    <div className="flex flex-col space-y-20 items-center text-center">
 
-                        {/* Contact Info & Map */}
-                        <div className="flex flex-col space-y-12">
-                            <div>
-                                <h2 className="font-serif text-3xl font-bold text-textdark mb-8">Salon Information</h2>
-                                <div className="space-y-6">
+                        {/* Contact Info */}
+                        <div className="w-full">
+                            <h2 className="font-serif text-3xl font-bold text-textdark mb-12">Salon Information</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
 
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 rounded-full bg-blush flex items-center justify-center flex-shrink-0 text-accentrose">
-                                            <Phone className="h-6 w-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-serif text-xl font-bold text-textdark mb-1">Phone</h3>
-                                            <a href="tel:01483475320" className="text-lg text-textdark/70 hover:text-accentrose transition-colors font-medium">
-                                                01483 475320
-                                            </a>
-                                        </div>
+                                <div className="flex flex-col items-center p-8 rounded-2xl bg-blush/30 border border-accentrose/10 shadow-sm hover:shadow-md transition-shadow">
+                                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-accentrose mb-6 shadow-sm">
+                                        <Phone className="h-8 w-8" />
                                     </div>
-
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 rounded-full bg-blush flex items-center justify-center flex-shrink-0 text-accentrose">
-                                            <MapPin className="h-6 w-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-serif text-xl font-bold text-textdark mb-1">Address</h3>
-                                            <p className="text-lg text-textdark/70 font-medium leading-relaxed">
-                                                Northpoint House, 52 High St,<br />
-                                                Knaphill, Woking,<br />
-                                                Surrey, GU21 2PY
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 rounded-full bg-blush flex items-center justify-center flex-shrink-0 text-accentrose">
-                                            <Clock className="h-6 w-6" />
-                                        </div>
-                                        <div className="w-full">
-                                            <h3 className="font-serif text-xl font-bold text-textdark mb-3">Hours</h3>
-                                            <div className="bg-blush/30 rounded-xl p-4 w-full max-w-xs border border-accentrose/20 text-textdark/80 font-medium">
-                                                <div className="flex justify-between mb-2">
-                                                    <span>Mon - Sat</span>
-                                                    <span>9am - 6pm</span>
-                                                </div>
-                                                <div className="flex justify-between">
-                                                    <span>Sunday</span>
-                                                    <span className="text-accentrose">Closed</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    <h3 className="font-serif text-2xl font-bold text-textdark mb-4">Phone</h3>
+                                    <a href="tel:01483475320" className="text-lg text-textdark/80 hover:text-accentrose transition-colors font-medium">
+                                        01483 475320
+                                    </a>
                                 </div>
-                            </div>
 
-                            {/* Small Map */}
-                            <div className="w-full h-64 rounded-2xl overflow-hidden shadow-sm border border-accentrose/20">
+                                <div className="flex flex-col items-center p-8 rounded-2xl bg-blush/30 border border-accentrose/10 shadow-sm hover:shadow-md transition-shadow">
+                                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-accentrose mb-6 shadow-sm">
+                                        <MapPin className="h-8 w-8" />
+                                    </div>
+                                    <h3 className="font-serif text-2xl font-bold text-textdark mb-4">Address</h3>
+                                    <p className="text-lg text-textdark/80 font-medium leading-relaxed">
+                                        Northpoint House, 52 High St,<br />
+                                        Knaphill, Woking, GU21 2PY
+                                    </p>
+                                </div>
+
+                                <div className="flex flex-col items-center p-8 rounded-2xl bg-blush/30 border border-accentrose/10 shadow-sm hover:shadow-md transition-shadow">
+                                    <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-accentrose mb-6 shadow-sm">
+                                        <Clock className="h-8 w-8" />
+                                    </div>
+                                    <h3 className="font-serif text-2xl font-bold text-textdark mb-4">Hours</h3>
+                                    <div className="text-lg text-textdark/80 font-medium space-y-2">
+                                        <div>Mon - Sat: 9am - 6pm</div>
+                                        <div className="text-accentrose font-bold">Sunday: Closed</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        {/* Map */}
+                        <div className="w-full">
+                            <h2 className="font-serif text-3xl font-bold text-textdark mb-8">Find Us</h2>
+                            <div className="w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
                                 <iframe
                                     src="https://maps.google.com/maps?q=Northpoint%20House,%2052%20High%20St,%20Knaphill,%20Woking%20GU21%202PY&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                     width="100%"
@@ -90,53 +73,6 @@ export default function Contact() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
                             </div>
-                        </div>
-
-                        {/* Contact Form */}
-                        <div>
-                            <Card className="shadow-lg border-accentrose/20 h-full">
-                                <CardContent className="p-8 md:p-12 h-full flex flex-col">
-                                    <div className="mb-8">
-                                        <h2 className="font-serif text-3xl font-bold text-textdark mb-4">Send us a Message</h2>
-                                        <p className="text-textdark/70 font-medium hidden sm:block">
-                                            Fill out the form below and we will get back to you to confirm your appointment or answer your questions.
-                                        </p>
-                                    </div>
-
-                                    {/* Using formsubmit.co for frictionless contact form. User receives email directly. */}
-                                    <form action="https://formsubmit.co/folahanwilliams@gmail.com" method="POST" className="space-y-6 flex-grow flex flex-col">
-                                        {/* Configuration for formsubmit */}
-                                        <input type="hidden" name="_subject" value="New Website Enquiry - Happy Nails!" />
-                                        <input type="hidden" name="_captcha" value="false" />
-                                        <input type="hidden" name="_next" value="https://happy-nails-nextjs.vercel.app/contact?submitted=true" />
-
-                                        <div className="space-y-2">
-                                            <label htmlFor="name" className="text-sm font-bold text-textdark">Full Name *</label>
-                                            <Input id="name" name="name" required placeholder="Jane Doe" className="border-accentrose/30 focus-visible:ring-accentrose py-6 text-base" />
-                                        </div>
-
-                                        <div className="space-y-2">
-                                            <label htmlFor="phone" className="text-sm font-bold text-textdark">Phone Number *</label>
-                                            <Input id="phone" name="phone" type="tel" required placeholder="07123 456789" className="border-accentrose/30 focus-visible:ring-accentrose py-6 text-base" />
-                                        </div>
-
-                                        <div className="space-y-2 flex-grow flex flex-col">
-                                            <label htmlFor="message" className="text-sm font-bold text-textdark">How can we help? *</label>
-                                            <Textarea
-                                                id="message"
-                                                name="message"
-                                                required
-                                                placeholder="I'd like to book a gel manicure for next Tuesday at 2pm..."
-                                                className="border-accentrose/30 focus-visible:ring-accentrose flex-grow resize-none text-base p-4 min-h-[150px]"
-                                            />
-                                        </div>
-
-                                        <Button type="submit" size="lg" className="w-full bg-accentrose hover:bg-mauve text-white rounded-full py-6 text-lg font-bold shadow-md transition-all duration-300">
-                                            <Send className="mr-2 h-5 w-5" /> Send Message
-                                        </Button>
-                                    </form>
-                                </CardContent>
-                            </Card>
                         </div>
 
                     </div>
